@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+nav > div:last-child {
+  margin-left: auto;
+  color:greenyellow;
+}
+nav > div:first-child {
+  color:greenyellow;
+}
+
+
