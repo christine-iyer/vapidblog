@@ -1,7 +1,7 @@
 import { useSortable } from '@dnd-kit/sortable'
 import { CSS } from '@dnd-kit/utilities'
 import { Card } from 'react-bootstrap'
-import Form from './Form'
+import Form from './NewBlogPost/Form'
 
 export function SortableItem(props){
      const {

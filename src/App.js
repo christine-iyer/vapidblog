@@ -3,16 +3,15 @@ import Container  from 'react-bootstrap/Container';
 import { DndContext,closestCenter } from '@dnd-kit/core';
 import  { arrayMove, SortableContext,verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { useState } from 'react';
-import Form from "./components/Form";
+import Form from "./components/NewBlogPost/Form";
 import {SortableItem} from "./components/SortableItem"
-
+import Blogs from "./pages/Blogs"
 
 function App() {
   const [dueDate, setDueDate] = useState(['Yesterday', "Today", 'Tomorrow']);
   return (
     <div className="App">
-      <><Form /></>
-      <DndContext
+ <DndContext
       collisionDetection={closestCenter}
       onDragEnd={handleDragEnd}
       >
@@ -31,6 +30,15 @@ function App() {
         </Container>
 
       </DndContext>
+
+      <div className='create'>
+      <><Form /></>
+     </div>
+
+     <div className='blog'>
+      <Blogs />
+
+     </div>
      
     </div>
   );
