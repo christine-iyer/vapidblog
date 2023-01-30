@@ -3,12 +3,18 @@ import Container  from 'react-bootstrap/Container';
 import { DndContext,closestCenter } from '@dnd-kit/core';
 import  { arrayMove, SortableContext,verticalListSortingStrategy } from '@dnd-kit/sortable';
 import { useState } from 'react';
-import Form from "./components/NewBlogPost/Form";
-import {SortableItem} from "./components/SortableItem"
-import Blogs from "./pages/Blogs"
+
+import {SortableItem} from "../../components/SortableItem"
+import Blogs from "../BlogPage/Blogs"
+import CreateBlog from '../../components/CreateBlog/CreateBlog'
 
 function App() {
   const [dueDate, setDueDate] = useState(['Yesterday', "Today", 'Tomorrow']);
+
+
+
+
+
   return (
     <div className="App">
  <DndContext
@@ -32,11 +38,12 @@ function App() {
       </DndContext>
 
       <div className='create'>
-      <><Form /></>
+      <><CreateBlog /></>
      </div>
 
      <div className='blog'>
       <Blogs />
+
 
      </div>
      
